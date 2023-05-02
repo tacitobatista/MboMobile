@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MbOMobile.Models"
+             xmlns:local1="clr-namespace:MbOMobile.Views"
+             x:Class="MbOMobile.Views.FlyoutMenuPage"
+             Title="FlyoutMenu">
+
+    <StackLayout>
+        <ListView x:Name="listaMenu" x:FieldModifier="public">
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type local:FlyoutItemPage}">
+                    <local:FlyoutItemPage Titulo="Home" FonteIcone="home.png" PaginaAlvo="{x:Type local1:HomePage}" />
+                    <local:FlyoutItemPage Titulo="Meus Dados" FonteIcone="meusdados.png" PaginaAlvo="{x:Type local1:MeusDadosPage}" />
+                    <local:FlyoutItemPage Titulo="Sobre" FonteIcone="sobre.png" PaginaAlvo="{x:Type local1:SobrePage}"/>
+                </x:Array>
+            </ListView.ItemsSource>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="33" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Image Source="{Binding FonteIcone}"/>
+                            <Label Grid.Column="1" Text="{Binding Titulo}" VerticalOptions="Center"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+    
+</ContentPage>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MbOMobile.Views.HomePage"
+             Title="Home">
+
+    <ContentPage.Content>
+
+        <StackLayout>
+            <StackLayout>
+                <Label x:Name="lblSaudacao"
+                    Text="Saudação"
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand"
+                   FontSize="22" 
+                   FontAttributes="Bold" 
+                   Margin="20" 
+                   Padding="20"/>
+
+                <ListView x:Name="listViewObjetivos" Margin="15" HasUnevenRows="True"
+                      ItemSelected="listViewObjetivos_ItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+
+                                <StackLayout Padding="10" >
+                                    <Label x:Name="lblNome" Text="{Binding Nome}" FontSize="11" />
+                                    <Label x:Name="lblEmail" Text="{Binding Email}" FontSize="11" />
+                                </StackLayout>
+
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

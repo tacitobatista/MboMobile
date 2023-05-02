@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MbOMobile.LoginPage">
+    
+    <ContentPage.Content>
+
+        <StackLayout 
+            Margin="20" 
+            Padding="20" 
+            VerticalOptions="StartAndExpand">
+
+            <Label Text="MbO"
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand" 
+                   FontSize="64"
+                   FontAttributes="Bold"/>
+
+            <Label Text="Management by Objectives"
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand" 
+                   FontSize="20"
+                   FontAttributes="Italic"/>
+
+            <Label Text="Login"
+                   Margin="50"
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand" 
+                   FontSize="18"/>
+            
+            <Entry x:Name="usuario" 
+                   Placeholder="Usuário"
+                   FontSize="14" 
+                   Keyboard="Default" />
+
+            <Entry x:Name="senha" 
+                   Placeholder="Senha" 
+                   FontSize="14" 
+                   Keyboard="Default"
+                   IsPassword="True"/>
+
+            <Grid ColumnDefinitions="2*,*,*,*">
+
+                <Label x:Name="lembrarUsuario" 
+                       Text="Lembrar usuário:" 
+                       VerticalOptions="CenterAndExpand"
+                       Grid.Column="0" 
+                       Margin="0"
+                       Padding="0" />
+                
+                <CheckBox x:Name="lembrarUsuarioCheckbox" 
+                          VerticalOptions="CenterAndExpand"
+                          Grid.Column="1" 
+                          Color="#2e93ff"
+                          Margin="0" />
+                
+            </Grid>
+            
+
+            <Button x:Name="btnConectar" 
+                    Margin="50"
+                    Text="Conectar" 
+                    Clicked="btnConectar_Clicked"
+                    CornerRadius="20"
+                    BackgroundColor="#2e93ff"
+                    TextColor="White"/>
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MbOMobile.Views.MeusDadosPage"
+             Title="Meus Dados">
+    
+    <ContentPage.Content Padding="0" Margin="0">
+
+        <StackLayout Spacing="0">
+
+            <Grid RowDefinitions="*,*,*,*" RowSpacing="0" Margin="0" Padding="0">
+
+                <!--<Label Text="Meus Dados"
+                   VerticalOptions="StartAndExpand" 
+                   HorizontalOptions="CenterAndExpand"
+                   FontSize="Large"
+                   FontAttributes="Bold"/>-->
+
+                <Label x:Name="nomeAtual"
+                       Text="Nome: "
+                       VerticalOptions="StartAndExpand" 
+                       HorizontalOptions="StartAndExpand"
+                       Grid.Row="1"/>
+
+                <Label x:Name="emailAtual"
+                       Text="Email: "
+                       VerticalOptions="StartAndExpand" 
+                       HorizontalOptions="StartAndExpand"
+                       Grid.Row="2"/>
+
+
+                <Button x:Name="btnAtualizarCadastro"
+                        Text="Atualizar Cadastro"
+                        VerticalOptions="StartAndExpand" 
+                        HorizontalOptions="StartAndExpand"
+                        Grid.Row="3"
+                        Clicked="btnAtualizarCadastro_Clicked"/>
+
+                <Button x:Name="btnAlterarSenha"
+                        Text="Alterar Senha"
+                        VerticalOptions="StartAndExpand" 
+                        HorizontalOptions="StartAndExpand"
+                        Grid.Row="4"
+                        Clicked="btnAlterarSenha_Clicked"/>
+            </Grid>
+            
+            
+
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
