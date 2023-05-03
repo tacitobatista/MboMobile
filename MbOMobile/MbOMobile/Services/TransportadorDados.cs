@@ -10,5 +10,9 @@ namespace MbOMobile.Services
         public static string Email;
 
         public static Usuario usuario;
+
+        public static List<Objetivo> objetivos { get; set; }
+
+        public static List<ObjetivoComum> objetivosComuns { get; set; }
     }
 }

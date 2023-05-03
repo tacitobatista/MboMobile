@@ -20,3 +20,4 @@ C:\Acelera Senior\MBO\MbOMobile\MbOMobile\MbOMobile\obj\Debug\netstandard2.0\Vie
 C:\Acelera Senior\MBO\MbOMobile\MbOMobile\MbOMobile\obj\Debug\netstandard2.0\Views\SobrePage.xaml.g.cs
 C:\Acelera Senior\MBO\MbOMobile\MbOMobile\MbOMobile\obj\Debug\netstandard2.0\Views\AtualizarCadastroPage.xaml.g.cs
 C:\Acelera Senior\MBO\MbOMobile\MbOMobile\MbOMobile\obj\Debug\netstandard2.0\Views\AlterarSenhaPage.xaml.g.cs
+C:\Acelera Senior\MBO\MbOMobile\MbOMobile\MbOMobile\obj\Debug\netstandard2.0\Views\MeusObjetivosPage.xaml.g.cs

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MbOMobile.Models
 {
-    class ObjetivoComum
+    public class ObjetivoComum
     {
         public int Id { get; set; }
         public int IdTipoObjetivo { get; set; }

@@ -49,12 +49,10 @@ namespace MbOMobile.Views
             ActivityIndicator activityIndicator = new ActivityIndicator { Color = Color.Orange };
             activityIndicator.IsRunning = true;
 
-            //string uri = "http://10.0.2.2:5203/api/objetivo";
             string uri = $"http://10.0.2.2:5203/api/usuario/GetUsuariosByEmail/{email}";
 
             var client = new HttpClient();
             var json = await client.GetStringAsync(uri);
-            //var dados = JsonConvert.DeserializeObject<Objetivo[]>(json);
             var dados = JsonConvert.DeserializeObject<Usuario>(json);
             TransportadorDados.usuario = dados;
 
@@ -70,10 +68,37 @@ namespace MbOMobile.Views
             string nomeUsuario = dados.Nome.Substring(0, index);
             lblSaudacao.Text = $"Bem vindo {nomeUsuario}!";
 
-            uri = $"http://10.0.2.2:5203/api/usuario/GetUsuariosByEmail/{email}";
+            //uri = $"http://10.0.2.2:5203/api/usuario/GetUsuariosByEmail/{email}";
+            //client = new HttpClient();
+            //json = await client.GetStringAsync(uri);
+            //dados = JsonConvert.DeserializeObject<Usuario>(json);
+
+            uri = $"http://10.0.2.2:5203/api/Objetivo/GetObjetivoByIdUsuario/{dados.Id}";
             client = new HttpClient();
             json = await client.GetStringAsync(uri);
-            dados = JsonConvert.DeserializeObject<Usuario>(json);
+            var dadosObj = JsonConvert.DeserializeObject<Objetivo[]>(json);
+            List<Objetivo> listaObjetivos = new List<Objetivo>();
+
+
+            foreach (var obj in dadosObj)
+            {
+                listaObjetivos.Add(obj);
+            }
+
+            TransportadorDados.objetivos = listaObjetivos;
+
+            uri = "http://10.0.2.2:5203/api/ObjetivoComum/GetObjetivosComuns/";
+            client = new HttpClient();
+            json = await client.GetStringAsync(uri);
+            var dadosObjComum = JsonConvert.DeserializeObject<ObjetivoComum[]>(json);
+            List<ObjetivoComum> listaObjComuns = new List<ObjetivoComum>();
+
+            foreach (var objCom in dadosObjComum)
+            {
+                listaObjComuns.Add(objCom);
+            }
+
+            TransportadorDados.objetivosComuns = listaObjComuns;
 
             activityIndicator.IsRunning = false;
         }

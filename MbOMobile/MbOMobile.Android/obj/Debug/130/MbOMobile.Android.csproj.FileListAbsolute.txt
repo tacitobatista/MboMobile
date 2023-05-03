@@ -640,3 +640,4 @@ C:\Acelera Senior\MBO\MbOMobile\MbOMobile\MbOMobile.Android\obj\Debug\130\androi
 C:\Acelera Senior\MBO\MbOMobile\MbOMobile\MbOMobile.Android\obj\Debug\130\res\drawable\home.png
 C:\Acelera Senior\MBO\MbOMobile\MbOMobile\MbOMobile.Android\obj\Debug\130\res\drawable\meusdados.png
 C:\Acelera Senior\MBO\MbOMobile\MbOMobile\MbOMobile.Android\obj\Debug\130\res\drawable\sobre.png
+C:\Acelera Senior\MBO\MbOMobile\MbOMobile\MbOMobile.Android\obj\Debug\130\res\drawable\meusobjetivos.png

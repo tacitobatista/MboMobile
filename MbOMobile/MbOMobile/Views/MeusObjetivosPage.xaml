@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MbOMobile.Views.MeusObjetivosPage"
+             Title="Meus Objetivos">
+    
+    <ContentPage.Content>
+        
+        <StackLayout>
+            <Label Text="Objetivos"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <ListView x:Name="listViewObjetivos" 
+                      ItemSelected="listViewObjetivos_ItemSelected">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="5">
+                                <Label Text="{Binding Descricao}" FontSize="14" />
+                                <Label Text="{Binding Peso}" FontSize="11" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Label Text="Objetivos Comuns"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <ListView x:Name="listViewObjetivosComuns" 
+                      ItemSelected="listViewObjetivosComuns_ItemSelected">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="5">
+                                <Label Text="{Binding Descricao}" FontSize="14" />
+                                <Label Text="{Binding Peso}" FontSize="11" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+        
+        
+        
+    </ContentPage.Content>
+    
+</ContentPage>

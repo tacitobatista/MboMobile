@@ -12,6 +12,7 @@
                 <x:Array Type="{x:Type local:FlyoutItemPage}">
                     <local:FlyoutItemPage Titulo="Home" FonteIcone="home.png" PaginaAlvo="{x:Type local1:HomePage}" />
                     <local:FlyoutItemPage Titulo="Meus Dados" FonteIcone="meusdados.png" PaginaAlvo="{x:Type local1:MeusDadosPage}" />
+                    <local:FlyoutItemPage Titulo="Meus Objetivos" FonteIcone="meusobjetivos.png" PaginaAlvo="{x:Type local1:MeusObjetivosPage}" />
                     <local:FlyoutItemPage Titulo="Sobre" FonteIcone="sobre.png" PaginaAlvo="{x:Type local1:SobrePage}"/>
                 </x:Array>
             </ListView.ItemsSource>
